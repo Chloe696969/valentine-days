@@ -323,7 +323,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
                     <div className="text-6xl font-black text-white font-mono tracking-tighter">
                         {progress}<span className="text-red-400 text-3xl">%</span>
                     </div>
-                    <span className="text-2xl text-white/60 font-playfair italic mt-2 tracking-widest">Love Intensity</span>
+                    <span className="text-2xl text-white/60 font-playfair italic mt-2 tracking-widest">Cintaku Padamu</span>
                 </div>
             </div>
 
@@ -340,7 +340,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
 
 // --- Step 4: Typewriter ---
 const TypewriterStep = ({ onComplete }: { onComplete: () => void }) => {
-    const text = "Aku cinta kamuu sayanggku napellaa!!!!";
+    const text = "i lovee u so muchhh, Napella, my everything:3";
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
