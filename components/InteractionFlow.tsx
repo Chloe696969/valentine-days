@@ -129,7 +129,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [isUserTurn, setIsUserTurn] = useState(true);
     const [winner, setWinner] = useState<string | null>(null);
-    const [message, setMessage] = useState("Let's play a little game...");
+    const [message, setMessage] = useState("ayoo main tictactoe");
 
     const checkWinner = useCallback((squares: (string | null)[]) => {
         const lines = [
@@ -185,10 +185,10 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
 
     useEffect(() => {
         if (winner === 'X') {
-            setMessage("Kamu Memenangkan");
+            setMessage("Yeyyy kamu udah menangin");
             setTimeout(() => onComplete(), 3500); // Increased timeout to wait for staggered animation
         } else if (winner === 'O' || winner === 'draw') {
-            setMessage(winner === 'draw' ? "Seri! Coba lagi yaa ❤️" : "Hampir! Sekali lagi...");
+            setMessage(winner === 'draw' ? "Yah seri, coba lagi mok" : "Alamak, ayo coba lagi");
             setTimeout(() => {
                 setBoard(Array(9).fill(null));
                 setWinner(null);
@@ -205,7 +205,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
             className="flex flex-col items-center justify-center space-y-10 relative z-10"
         >
             <h2 className="text-4xl font-playfair text-white text-center drop-shadow-lg max-w-xs whitespace-pre-line leading-tight">
-                {winner === 'X' ? "Kamu Memenangkan" : message}
+                {winner === 'X' ? "Yeyyy kamu udah menangin" : message}
             </h2>
             <div className="grid grid-cols-3 gap-3 p-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl">
                 {board.map((square, i) => (
@@ -244,7 +244,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl font-playfair text-white text-center drop-shadow-lg mt-4"
                     >
-                        Hatiku
+                        hatiku :p
                     </motion.h2>
                 )}
             </AnimatePresence>
@@ -340,7 +340,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
 
 // --- Step 4: Typewriter ---
 const TypewriterStep = ({ onComplete }: { onComplete: () => void }) => {
-    const text = "Happy Birthday!!!!";
+    const text = "Aku cinta kamuu sayanggku napellaa!!!!";
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
